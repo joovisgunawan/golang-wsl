@@ -1,0 +1,21 @@
+to run task manually to check executabiliy
+/home/joubuntu24/golang-wsl/mybinarybuildname
+
+to check file permission
+/home/joubuntu24/golang-wsl/myprogramname
+
+
+[Unit]
+Description=My Go Program Service in WSL
+After=network.target
+
+[Service]
+ExecStart=/home/joubuntu24/golang-wsl/golang-wsl
+WorkingDirectory=/home/joubuntu24/golang-wsl
+Restart=always
+RestartSec=1
+User=joubuntu24
+Environment=GO_ENV=production
+
+[Install]
+WantedBy=multi-user.target
