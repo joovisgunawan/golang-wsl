@@ -1,0 +1,10 @@
+pull
+git clone link
+
+push 
+git remote -v
+
+git add .
+git commit -m "message"
+
+git push -u origin main

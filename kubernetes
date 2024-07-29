@@ -1,0 +1,21 @@
+//start minikube to run kubernetes inside it
+minikube start
+
+//cek minikube status 
+minikube status
+
+//cek kubernetes status, use Kubectl which is command lien tools to use kubernetes, it is use redis-cli to use redis, or mongosh to use mongodb
+kubectl cluster-info
+
+//cek pods
+kubectl get pods
+
+//run and pull public images, here theimages is already pulled from docker hub
+kubectl run golang-wsl-kubernetes --image=joovisgunawan/golang-wsl-repo
+
+//cek status again
+kubectl get pods
+
+//stop it by deleting it
+kubectl delete pod golang-wsl-kubernetes
+
